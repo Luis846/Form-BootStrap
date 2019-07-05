@@ -5,23 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1be0059efe.js"></script>
     <title>Form-Bootstrap</title>
 </head>
 <body>
-        <div class="card text-center">
-                <h2>
+
+
+    <form>
+        <div class="card m-5">
+                <h2 class="card-header">
                   Payment form example
                 </h2>
                 <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <div class="alert alert-danger" role="alert">
+                                Some fields are missing
+                              </div>
+
+
+                              <div class="row">
+                              <div class="col-5">
+                                    <label for="formGroupExampleInput">Card #</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="XXXXXXXXXXXXXXXX">
+                              </div>
+
+                              <div class="col">
+                                    <label for="formGroupExampleInput">CVC #</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="0000">
+                                  </div>
+
+                                  <div class="col">
+                                      <p class="mb-0">Amount</p>
+                                        <div class="input-group-prepend mt-0 pt-2">
+                                          <div class="input-group-text bg-white border-0"><i class="fas fa-dollar-sign"></i></div>
+
+                                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Amount">
+                                      </div>
+                                    </div>
+                                    </div>
+
+
+                                    <div class="row mt-3">
+                                            <div class="col">
+                                                  <label for="formGroupExampleInput">First Name</label>
+                                                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                            </div>
+
+                                            <div class="col">
+                                                  <label for="formGroupExampleInput">Last Name</label>
+                                                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                                </div>
+                                                  </div>
+
+                                                  <div class="row mt-3">
+                                                        <div class="col-6">
+                                                              <label for="formGroupExampleInput">City</label>
+                                                              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                                        </div>
+
+                                                        <div class="col">
+                                                              <label for="formGroupExampleInput">State</label>
+                                                              <select class="form-control">
+                                                                    <option>Pick a state</option>
+                                                                  </select>
+                                                            </div>
+
+                                                            <div class="col">
+                                                                    <label for="formGroupExampleInput">Postal Code</label>
+                                                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                                              </div>
+                                                              </div>
+
+                                                              <div class="row">
+                                                                    <div class="col-3 mt-3">
+                                                                            <label for="formGroupExampleInput">We accept:</label>
+                                                                            <div>
+                                                                            <input type="text" class="form-control " id="formGroupExampleInput" placeholder="">
+                                                                            </div>
+                                                                      </div>
+
+                                                              </div>
+                                                              <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                                                  </div>
+                                                                  <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                                    <label class="form-check-label" for="inlineRadio2">2</label>
+                                                                  </div>
+                                                                  <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+                                                                    <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+                                                                  </div>
+
+
+                                  </div>
                   <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
                 <div class="card-footer text-muted">
                   2 days ago
                 </div>
               </div>
+            </form>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 </body>
