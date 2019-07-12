@@ -9,10 +9,10 @@
     <script src="https://kit.fontawesome.com/1be0059efe.js"></script>
     <title>Form-Bootstrap</title>
 </head>
-<body>
+<body onload="initialize();">
 
 
-    <form>
+    <form  id="myForm" name="myForm" onsubmit="validateForm();">
         <div class="card m-5">
                 <h2 class="card-header">
                   Payment form example
@@ -27,12 +27,12 @@
                               <div class="row">
                               <div class="col-5">
                                     <label for="formGroupExampleInput">Card #</label>
-                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="XXXXXXXXXXXXXXXX">
+                                    <input type="number" min="16" max="16" name="fname" class="form-control" id="formGroupExampleInput" placeholder="XXXXXXXXXXXXXXXX">
                               </div>
 
                               <div class="col-3">
                                     <label for="formGroupExampleInput">CVC#</label>
-                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                    <input type="number" min="3" max="3" name="fname" class="form-control" id="formGroupExampleInput" placeholder="">
                                   </div>
 
                                   <div class="form-group col-4">
@@ -41,7 +41,7 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text  border-0 bg-transparent"><i class="fas fa-dollar-sign"></i></span>
                                             </div>
-                                            <input class="form-control" type="text" placeholder="Amount">
+                                            <input  name="fname" class="form-control" type="text" placeholder="Amount">
                                             </div>
                                     </div>
                                 </div>
@@ -50,26 +50,26 @@
 
                                             <div class="col-6">
                                                   <label for="formGroupExampleInput">First Name</label>
-                                                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                                  <input  name="fname" type="text" class="form-control" placeholder="">
                                                   <label for="formGroupExampleInput">City</label>
-                                                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                                  <input  name="fname" type="text" class="form-control" id="formGroupExampleInput" placeholder="">
 
                                                   <label for="">We accept:</label><br>
                            <div  class =" col-6 bg-dark round m-1 pl-1 text-white text-center p-0 rounded">
                                <div class="form-check form-check-inline mr-2">
-                                   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                   <input  class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
                                    <label class="form-check-label" for="inlineRadio1"><i class="fab fa-cc-visa"></i></label>
                                </div>
                                <div class="form-check form-check-inline m-2">
-                                   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                   <input   class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                                    <label class="form-check-label" for="inlineRadio2"><i class="fab fa-cc-mastercard"></i></label>
                                </div>
                                <div class="form-check form-check-inline m-2">
-                                   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                   <input   class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
                                    <label class="form-check-label" for="inlineRadio3"><i class="fab fa-cc-discover"></i></label>
                                </div>
                                <div class="form-check form-check-inline ml-2">
-                                   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                   <input   class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
                                    <label class="form-check-label" for="inlineRadio3"><i class="fab fa-cc-amex"></i></label>
                                </div>
                            </div>
@@ -79,17 +79,18 @@
 
                                                 <div class="col-6">
                                                         <label for="formGroupExampleInput">Last Name</label>
-                                                        <input type="text" class="form-control mb-2" id="formGroupExampleInput" placeholder="">
+                                                        <input  name="fname" type="text" class="form-control mb-2" id="formGroupExampleInput" placeholder="">
                                                 <div class="row">
                                                     <div class="col">
                                                         <label for="">State</label>
-                                                        <select  class="form-control" name="" id="">
+                                                        <select  class="form-control" name="">
                                                             <option value="">Pick a State</option>
+                                                            <option value="">FL</option>
                                                         </select>
                                                     </div>
                                                         <div class="col">
                                                             <label for="">Postal Code</label>
-                                                            <input type="text" class="form-control">
+                                                            <input name="fname" type="text" class="form-control">
                                                     </div>
 
                                                 </div>
@@ -107,15 +108,17 @@
                 </div>
                 <div class="card-footer text-muted">
                     <div class="float-right">
-                        <a href="#" class="btn btn-secondary">Cancel</a>
-                        <a href="#" class="btn btn-primary">Send</a>
+                        <button  class="btn btn-secondary">Cancel</button>
+                        <button  type="submit"class="btn btn-primary">Send</button>
                         </div>
                   2 days ago
                 </div>
               </div>
             </form>
+            
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="index.js"></script>
 </body>
 </html>
 
