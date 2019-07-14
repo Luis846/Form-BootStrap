@@ -1,29 +1,40 @@
 let warns = document.querySelector('.alert');
-let forms = document.querySelector('.myForm');
-let inputs = document.getElementsByTagName("input");
+let inputs = document.querySelectorAll("input");
 const myForms = document.getElementById('myForm');
 
 function validateForm() {
-  let vals = document.forms["myForm"]["fname"].value;
-  
+
       warns.style.display = "block";
      for (e of inputs) {
-         if(vals === ""){
+         if(e.value === ""){
              e.placeholder = "Please Fill";
              e.style.backgroundColor = '#f8d7da';
-         }else{
+         }else if(e.value !== ""){
              e.style.backgroundColor = "white";
          }
 }
- 
-   
-        
-  
+
+}
+
+
+function checkforblank() {
+
+    let selects = document.querySelector("select");
+    let invalid = selects.value == "Pick a State";
+
+    if (invalid) {
+        selects.style.backgroundColor = "#f8d7da";
+        selects.placeholder = "Please Fill";
+    }
+    else {
+        selects.style.backgroundColor = "white";
+    }
+
 }
 
 function initialize(){
     warns.style.display = "none";
-    
+
 }
 
 
