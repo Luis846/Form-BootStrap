@@ -5,20 +5,25 @@ const myForms = document.getElementById('myForm');
 
 function validateForm() {
   let vals = document.forms["myForm"]["fname"].value;
-  if (vals === "") {
+  
       warns.style.display = "block";
      for (e of inputs) {
-         e.placeholder = "yoooooo"
-        e.style.backgroundColor = "red !important";
+         if(vals === ""){
+             e.placeholder = "Please Fill";
+             e.style.backgroundColor = '#f8d7da';
+         }else{
+             e.style.backgroundColor = "white";
+         }
 }
-  }else{
-      initialize();
-  }
+ 
+   
+        
+  
 }
 
 function initialize(){
     warns.style.display = "none";
-    inputs.style.backgroundColor = '#fff !important';
+    
 }
 
 
