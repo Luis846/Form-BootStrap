@@ -20,6 +20,7 @@ function validateForm() {
 function checkforblank() {
 
     let selects = document.querySelector("select");
+    let messageArea = document.querySelector("textarea");
     let invalid = selects.value == "Pick a State";
 
     if (invalid) {
@@ -28,6 +29,15 @@ function checkforblank() {
     }
     else {
         selects.style.backgroundColor = "white";
+    }
+
+    if(messageArea.value == ''){
+        messageArea.style.backgroundColor = "#f8d7da";
+        messageArea.placeholder = "Please Fill";
+
+}
+    else{
+        messageArea.style.backgroundColor = "white";
     }
 
 }
